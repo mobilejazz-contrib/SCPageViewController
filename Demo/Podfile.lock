@@ -1,0 +1,13 @@
+PODS:
+  - AHEasing (1.2)
+  - SCScrollView (1.1.1):
+    - AHEasing (~> 1.0)
+
+DEPENDENCIES:
+  - SCScrollView (~> 1.1)
+
+SPEC CHECKSUMS:
+  AHEasing: ecab36683ef8c3a9a925fb85e892d1335e750f31
+  SCScrollView: f3d525a0e0d155458e55fdbf2d951274fdc1314c
+
+COCOAPODS: 0.35.0

@@ -48,17 +48,28 @@
 {
     if(self = [super init]) {
         
-        self.loadedControllers = [NSMutableOrderedSet orderedSet];
-        self.visibleControllers = [NSMutableArray array];
-        self.pageIndexes = [NSMutableDictionary dictionary];
-        self.visiblePercentages = [NSMutableDictionary dictionary];
-        self.pagingEnabled = YES;
-        
-        self.easingFunction = [SCEasingFunction easingFunctionWithType:SCEasingFunctionTypeSineEaseInOut];
-        self.animationDuration = 0.25f;
+        [self defaultSetup];
     }
     
     return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self defaultSetup];
+}
+
+- (void)defaultSetup
+{
+    self.loadedControllers = [NSMutableOrderedSet orderedSet];
+    self.visibleControllers = [NSMutableArray array];
+    self.pageIndexes = [NSMutableDictionary dictionary];
+    self.visiblePercentages = [NSMutableDictionary dictionary];
+    self.pagingEnabled = YES;
+    
+    self.easingFunction = [SCEasingFunction easingFunctionWithType:SCEasingFunctionTypeSineEaseInOut];
+    self.animationDuration = 0.25f;
 }
 
 - (void)viewDidLoad
