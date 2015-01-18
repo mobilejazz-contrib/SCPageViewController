@@ -85,6 +85,7 @@
     self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
     self.scrollView.delegate = self;
     self.scrollView.clipsToBounds = NO;
+    self.scrollView.bounces = NO;
     
     [self.view addSubview:self.scrollView];
     

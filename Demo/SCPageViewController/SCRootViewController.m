@@ -44,6 +44,7 @@
     [self addChildViewController:self.pageViewController];
     
     [self.pageViewController setLayouter:[[SCPageLayouter alloc] init] animated:NO completion:nil];
+    ((SCPageLayouter *)self.pageViewController.layouter).interItemSpacing = 0;
     
     //[self.pageViewController setPagingEnabled:NO];
     
